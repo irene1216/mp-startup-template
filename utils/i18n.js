@@ -60,35 +60,35 @@ let navigationBarTitles = ["爱的堡", "Adogp"];
 let tabBarLangs = [
   [
     {
-      iconPath: "/image/tab1.svg",
-      selectedIconPath: "/image/tab1_active.svg",
-      text: "所有狗",
+      iconPath: "/images/tab1.svg",
+      selectedIconPath: "/images/tab1_active.svg",
+      text: "首页",
     },
     {
-      iconPath: "/image/tab2.svg",
-      selectedIconPath: "/image/tab2_active.svg",
-      text: "上传狗",
+      iconPath: "/images/tab2.svg",
+      selectedIconPath: "/images/tab2_active.svg",
+      text: "上传",
     },
     {
-      iconPath: "/image/tab3.svg",
-      selectedIconPath: "/image/tab3_active.svg",
+      iconPath: "/images/tab3.svg",
+      selectedIconPath: "/images/tab3_active.svg",
       text: "我的",
     },
   ],
   [
     {
-      iconPath: "/image/tab1.svg",
-      selectedIconPath: "/image/tab1_active.svg",
-      text: "All Dogs",
+      iconPath: "/images/tab1.svg",
+      selectedIconPath: "/images/tab1_active.svg",
+      text: "Home",
     },
     {
-      iconPath: "/image/tab2.svg",
-      selectedIconPath: "/image/tab2_active.svg",
-      text: "Post a Dog",
+      iconPath: "/images/tab2.svg",
+      selectedIconPath: "/images/tab2_active.svg",
+      text: "Upload",
     },
     {
-      iconPath: "/image/tab3.svg",
-      selectedIconPath: "/image/tab3_active.svg",
+      iconPath: "/images/tab3.svg",
+      selectedIconPath: "/images/tab3_active.svg",
       text: "Profile",
     },
   ],

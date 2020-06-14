@@ -6,10 +6,11 @@ import T from '../../utils/i18n';
 Page({
   data: {
     // tabbar data
-    currentTab: 0,
     langIndex: 0,
     tabItems: 0,
     navBot:0,
+    index: true,
+    profile: false,
 
     // language
     language: {}
@@ -22,8 +23,19 @@ Page({
     console.log(that.data)
   },
 
+  onHide: function () {
+    console.log("this.onHide")
+    wx.setStorage({
+      key: 'globalData',
+      data: globalData
+    })
+  },
+
+  onUnload: function() {
+    console.log("this.unloadd")
+  },
+
   changeLanguage(langIndex) {
-  
     this.setData({
       langIndex: langIndex
     });
@@ -31,11 +43,26 @@ Page({
     event.emit('languageChanged');
   },
 
-  setLanguage() {
+  setLanguage: function () {
     this.setData({
       langIndex: wx.T.getlangIndex(),
       language: wx.T.getLanguage(),
+      tabItems: wx.T.setTabBarLang()
     });
   },
+
+    toIndex: function () {
+      this.setData({
+        index: true,
+        profile: false
+      })
+    },
+
+    toProfile: function () {
+      this.setData({
+        profile: true,
+        index: false
+      })
+    }
  
 })

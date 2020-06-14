@@ -1,6 +1,6 @@
 <!--components/tabbar/tabbar.wxml-->
   <view class="nav-tabs" >
-    <view class="tab-list {{currentTab == idx ? 'active' : 'default' }}" style="padding-bottom:{{navBot}}rpx;" wx:for="{{tabItems}}" wx:key="prototype" wx:for-index="idx" wx:for-item="item" data-current="{{idx}}" bindtap="swichNav">
+    <view class="tab-list {{currentTab == idx ? 'active' : 'default' }}" style="padding-bottom:{{navBot}}rpx;" wx:for="{{tabItems}}" wx:key="prototype" wx:for-index="idx" wx:for-item="item" data-current="{{idx}}" bindtap="switchTab">
       <block wx:if="{{idx == 2}}">
       <block wx:if="{{profileNewAlert}}">
         <image wx:if="{{langIndex==1}}" class="tab-alert-en" src="../../image/tab_alert_en.svg"></image>

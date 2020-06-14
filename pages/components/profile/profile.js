@@ -4,7 +4,10 @@ Component({
    * Component properties
    */
   properties: {
-
+    profile: {
+      type: Boolean,
+      value: {}
+    }
   },
 
   data: {

@@ -2,12 +2,22 @@
 />
 
 <tabbar
-  currentTab="{{currentTab}}"
   langIndex="{{langIndex}}"
+  language="{{language}}"
   tabItems="{{tabItems}}"
   navBot="{{navBot}}"
+  bindtoIndex="toIndex"
+  bindtoProfile="toProfile"
 />   
 
-<index/>
+<index
+  index="{{index}}"
+  langIndex="{{langIndex}}"
+  language="{{language}}"
+/>
+
 <profile
+  profile="{{profile}}"
+  langIndex="{{langIndex}}"
+  language="{{language}}"
 />

@@ -6,9 +6,9 @@ import T from 'utils/i18n';
 const savedLangIdx = wx.getStorageSync('globalData').langIndex
 const savedGlobalData = wx.getStorageSync('globalData');
 T.registerLocale(locales);
-
 if (savedLangIdx != null) {
   T.setLocaleByIndex(savedLangIdx);
+  console.log("there is somethinggggggggggggg")
   wx.T = T;
 } else {
   wx.getSystemInfo({

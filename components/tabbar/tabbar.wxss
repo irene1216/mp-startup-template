@@ -1,1 +1,70 @@
 /* components/tabbar/tabbar.wxss */
+.nav-tabs {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+}
+
+.tab-list {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #fcfcfc;
+  height: 150rpx;
+  position: relative;
+}
+
+.tab-text {
+  font-size: 24rpx;
+  line-height: 35rpx;
+}
+
+.iconPath {
+  width:54rpx;
+  height: 54rpx;
+}
+
+.tab-content {
+  flex: 1;
+}
+
+.tab-alert-en {
+  width: 42rpx;
+  height: 18rpx;
+  right: 30px;
+  position: absolute;
+  top: 20rpx;
+}
+
+.tab-alert-zh {
+  width: 42rpx;
+  height: 20rpx;
+  right: 30px;
+  position: absolute;
+  top: 20rpx;
+}
+
+
+.default {
+  line-height: 75rpx;
+  text-align: center;
+  flex: 1;
+  color: #AAAAAA;
+  /* border-bottom: 1px solid #eee; */
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.active {
+  line-height: 75rpx;
+  text-align: center;
+  color: #000000;
+  flex: 1;
+  /* border-bottom: 1px solid red; */
+  font-weight: bold;
+  font-size: 28rpx;
+}
