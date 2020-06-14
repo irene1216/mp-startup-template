@@ -1,0 +1,13 @@
+<navbar
+/>
+
+<tabbar
+  currentTab="{{currentTab}}"
+  langIndex="{{langIndex}}"
+  tabItems="{{tabItems}}"
+  navBot="{{navBot}}"
+/>   
+
+<index/>
+<profile
+/>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "navbar": "../../components/navbar/navbar",
+    "tabbar": "../../components/tabbar/tabbar",
+    "index": "/pages/components/index/index",
+    "profile": "/pages/components/profile/profile"
+  }
+}

@@ -1,0 +1,91 @@
+/* components/navbar.wxss */
+.nav-bar  { 
+  position: fixed; 
+  width: 100%; 
+  top: 0; 
+  color: #111; 
+}
+
+.landing {
+  position: fixed;
+  z-index: 9999;
+}
+.nav-bar .back { 
+  font-size: 28rpx; 
+  position: absolute; 
+  padding-left: 28rpx;
+} 
+
+.easy-tab {
+  z-index: 1000;
+}
+
+.bullet {
+  background: #FFFFFF;
+  opacity: 0.5;
+  border: 1px solid #CCCCCC;
+  box-sizing: border-box;
+  border-radius: 28rpx;
+}
+
+.nav-bar .info { 
+  font-size: 28rpx; 
+  position: absolute; 
+  z-index: 1000;
+}
+
+.nav-bar .icon { 
+  padding-left: 28rpx;
+}
+
+.title-container {
+  z-index: 1;
+  font-size: 28rpx; 
+  position: absolute; 
+  width: 100vw;
+  text-align: center;
+}
+
+.single-back {
+  /* opacity: 0.2; */
+}
+
+.single-back-hover {
+  opacity: 0.5; 
+}
+
+.nav-left {
+  display: flex;
+  position: absolute;
+}
+
+.nav-border {
+  border: 1px solid #e5e5e5;
+  width: 170rpx;
+  height: 60rpx;
+  border-radius: 30px;
+}
+
+.nav-left-icon {
+  line-height: 1;
+  padding: 7px 16px;
+}
+
+.nav-left-icon + .nav-left-icon:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 18px;
+  background: #e5e5e5;
+  top: 6px;
+  left: 0;
+}
+
+.nav-left-icon + .nav-left-icon {
+  position: relative;
+  padding: 7px 12px 7px 18px;
+}
+
+.hide-home {
+  display: none;
+}
