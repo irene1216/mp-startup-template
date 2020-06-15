@@ -47,7 +47,9 @@
 }
 
 .single-back {
-  /* opacity: 0.2; */
+  padding-left: 0px; 
+  z-index: 1002; 
+  float: left;
 }
 
 .single-back-hover {

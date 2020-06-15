@@ -33,13 +33,11 @@ Page({
       that.setData({
         navHeight: globalData.navBarHeight,
         navBot: 10,
-        // for mask
       })
     } else if (h<=600){
       that.setData({
         navHeight: globalData.navBarHeight,
         navBot: 10
-        // for mask
       })
     }
   },
@@ -72,14 +70,18 @@ Page({
     toIndex: function () {
       this.setData({
         index: true,
-        profile: false
+        profile: false,
+        navStyle: 'transparent',
+        navTitle: '',
       })
     },
 
     toProfile: function () {
       this.setData({
         profile: true,
-        index: false
+        index: false,
+        navStyle: 'white',
+        navTitle: this.data.language.myProfile
       })
     }
  

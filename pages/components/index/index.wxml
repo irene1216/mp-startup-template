@@ -1,7 +1,9 @@
 <!--pages/components/index/index.wxml-->
 <block wx:if="{{index}}">
-  <view class="lang-switch" hover-class="hover">
-    <image bindtap="switchLang" class="language-icon" src="../../../images/language_icon.svg"></image>
+  <view style="padding-top: {{navHeight}}rpx">
+    <view class="lang-switch" hover-class="hover">
+      <image bindtap="switchLang" class="language-icon" src="../../../images/language_icon.svg"></image>
+    </view>
+    <view bindtap="switchLang" hover-class="hover">{{language.changeLang}}</view>
   </view>
-  <view>{{language.changeLang}}</view>
 </block>

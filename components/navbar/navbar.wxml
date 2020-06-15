@@ -1,27 +1,23 @@
 <!--components/navbar.wxml-->
 <view class="nav-bar" style="height:{{navHeight}}rpx; background: {{white? 'white' : ''}};z-index:1002">
-  
     <block wx-if="{{backArrow}}">
-      <view class="single-back" hover-class="single-back-hover" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; padding-left:{{menuRight * 2}}px; padding-top:{{menuTop}}px; padding-left: 0px; z-index:1002">
-      <image class="icon" src="../../image/black_back_icon.svg" bindtap='back' style="width:64rpx;height:64rpx; margin-bottom:25rpx; margin-right:25rpx;z-index:1002;"></image>
+      <view class="single-back" hover-class="single-back-hover" style=" padding-left:{{menuRight * 2}}px; padding-top:{{menuTop}}px">
+      <image class="icon" src="../../images/black_back_icon.svg" bindtap='back' style="width:64rpx;height:64rpx; margin-bottom:25rpx; margin-right:25rpx;z-index:1002;"></image>
       </view>
     </block>
     <block wx-if="{{white}}">
-      <block wx-if="{{!noBack}}">
         <view class="info" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; left:{{menuRight}}px; bottom:{{menuBottom}}px; z-index: 19999">
           <view class="nav-left {{ hasHome ? 'nav-border' : ''}} {{ whiteBack ? '' : 'hide-home' }}"  style="bottom:{{menuBottom}}px;">
             <view class="easy-tab nav-left-icon "  hover-class="single-back-hover" wx-if="{{whiteBack}}"  bindtap='back' >
-              <image src="../../image/back2_icon.svg" style="width:16rpx; height:32rpx;"></image>
+              <image src="../../images/back2_icon.svg" style="width:16rpx; height:32rpx;"></image>
             </view>
             <view class="nav-home nav-left-icon {{ hasHome ? '' : 'hide-home'}}" hover-class="single-back-hover"  bindtap='home' >
-              <image src="../../image/home_icon.svg" style="width:28rpx; height:32rpx;"></image>
+              <image src="../../images/home_icon.svg" style="width:28rpx; height:32rpx;"></image>
             </view>
           </view>
         </view>
-      </block>
       <view class="title-container" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; bottom:{{menuBottom}}px; padding-right:{{menuRight}}px;">
         {{navTitle}}
       </view>
     </block>
 </view>
-<view class="content" style="margin-top:{{navHeight}}rpx;"></view>
