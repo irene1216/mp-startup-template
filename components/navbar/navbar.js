@@ -1,10 +1,11 @@
 // components/navbar.js
 Component({
-  /**
-   * Component properties
-   */
   properties: {
     langIndex: {
+      type: Number,
+      value: 0
+    },
+    navHeight: {
       type: Number,
       value: 0
     },
@@ -12,13 +13,25 @@ Component({
       type: Object,
       value: {}
     },
+    navStyle: {
+      type: String,
+      value: '',
+      observer: function(newVal) {
+        if (newVal == 'transparent') {
+          this.setData({
+            transparent: true
+          })
+        }
+      }
+    },
   },
-
-  /**
-   * Component initial data
-   */
   data: {
-
+    // navHeight: globalData.navBarHeight,
+    // menuLeft: globalData.menuLeft,
+    // menuTop: globalData.menuTop,
+    // menuRight: globalData.menuRight,
+    // menuBottom: globalData.menuBottom,
+    // menuHeight: globalData.menuHeight,
   },
 
   /**

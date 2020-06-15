@@ -1,15 +1,19 @@
 // pages/components/profile/profile.js
 Component({
-  /**
-   * Component properties
-   */
   properties: {
     profile: {
       type: Boolean,
       value: {}
-    }
+    },
+    langIndex: {
+      type: Number,
+      value: 0
+    },
+    language: {
+      type: Object,
+      value: {}
+    },
   },
-
   data: {
     userInfo: {},
     hasUserInfo: false,

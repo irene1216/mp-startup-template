@@ -1,8 +1,5 @@
 // pages/components/index/index.js
 Component({
-  /**
-   * Component properties
-   */
   properties: {
     langIndex: {
       type: Number,
@@ -18,13 +15,12 @@ Component({
     }
   },
 
-  /**
-   * Component initial data
-   */
   data: {
 
   },
   methods: {
-
+    switchLang: function () {
+      this.triggerEvent("switchLang")
+    }
   }
 })

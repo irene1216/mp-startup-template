@@ -45,6 +45,7 @@ App({
     wx.getSystemInfo({
       success: function (e) {
         const m = wx.getMenuButtonBoundingClientRect()
+        that.globalData.menu = m
         that.globalData.navBarHeight = ((m.top - e.statusBarHeight)*2 + m.height + e.statusBarHeight)*2;
         that.globalData.menuTop = m.top
         that.globalData.menuLeft = e.screenWidth - m.left
@@ -139,7 +140,14 @@ App({
     // })
   },
 
-  globalData: {
-    userInfo: null
+  setLanguage: function () {
+    this.globalData.url = wx.T.getUrl();
+    this.globalData.langIndex = wx.T.getlangIndex(),
+    this.globalData.language = wx.T.getLanguage();
+    this.globalData.url = wx.T.getUrl()
+    wx.setStorage({
+      key: 'globalData',
+      data: this.globalData
+    });
   }
 })

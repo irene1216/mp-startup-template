@@ -1,4 +1,6 @@
 <navbar
+  navStyle="{{navStyle}}"
+  navHeight="{{navHeight}}"
 />
 
 <tabbar
@@ -14,10 +16,12 @@
   index="{{index}}"
   langIndex="{{langIndex}}"
   language="{{language}}"
+  bindswitchLang="switchLang"
 />
 
 <profile
   profile="{{profile}}"
   langIndex="{{langIndex}}"
   language="{{language}}"
+  bindswitchLang="switchLang"
 />

@@ -1,4 +1,7 @@
 <!--pages/components/index/index.wxml-->
 <block wx:if="{{index}}">
-  <text>pages/components/index/index.wxml</text>
+  <view class="lang-switch" hover-class="hover">
+    <image bindtap="switchLang" class="language-icon" src="../../../images/language_icon.svg"></image>
+  </view>
+  <view>{{language.changeLang}}</view>
 </block>

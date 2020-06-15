@@ -1,5 +1,5 @@
 //index.js
-const app = getApp()
+const globalData = getApp().globalData
 import event from '../../utils/event';
 import T from '../../utils/i18n';
 
@@ -13,26 +13,44 @@ Page({
     profile: false,
 
     // language
-    language: {}
+    language: {},
+
+    //navbar data
+    navStyle: 'transparent'
   },
   onLoad: function () {
     let that = this
     event.on('loadingDone', that, that.finishLoading);
     event.on('languageChanged', that, that.setLanguage);
     that.setLanguage()
-    console.log(that.data)
+    let h = globalData.screenSize.height
+    if (h>=800){
+      that.setData({
+        navHeight: globalData.navBarHeight,
+        navBot: 10
+      }) 
+    } else if (h>600 && h <800){
+      that.setData({
+        navHeight: globalData.navBarHeight,
+        navBot: 10,
+        // for mask
+      })
+    } else if (h<=600){
+      that.setData({
+        navHeight: globalData.navBarHeight,
+        navBot: 10
+        // for mask
+      })
+    }
   },
 
-  onHide: function () {
-    console.log("this.onHide")
-    wx.setStorage({
-      key: 'globalData',
-      data: globalData
-    })
-  },
-
-  onUnload: function() {
-    console.log("this.unloadd")
+  switchLang() {
+    console.log("old lang", this.data.langIndex)
+    if (this.data.language.langIndex == 0) {
+      this.changeLanguage(1)
+    } else {
+      this.changeLanguage(0)
+    }
   },
 
   changeLanguage(langIndex) {

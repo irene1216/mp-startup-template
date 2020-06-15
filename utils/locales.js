@@ -35,7 +35,8 @@ export default {
     confirm: "确定",
     allow: "允许",
     deny: "拒绝",
-    myProfile: "个人资料"
+    myProfile: "个人资料",
+    homepage: "主页"
   },
   'en': {
     language: "Language",
@@ -43,7 +44,7 @@ export default {
     languageName: "English",
     uploading: "Uploading",
     myuploads: "My Uploads",
-    login: "Create an account",
+    login: "Login",
     changeLang: "切换语言",
     edit: "Edit",
     save: "Save",
@@ -68,5 +69,6 @@ export default {
     allow: "Allow",
     deny: "Deny",
     myProfile: "My Profile",
-    }
+    homepage: "Home"
+  }
 }

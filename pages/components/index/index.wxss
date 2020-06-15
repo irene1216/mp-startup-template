@@ -1,1 +1,17 @@
 /* pages/components/index/index.wxss */
+page {
+  text-align: center;
+}
+
+.language-icon {
+  height: 48rpx;
+  width: 48rpx;
+}
+
+.lang-switch {
+  
+}
+
+.hover {
+  opacity: 0.7;
+}
