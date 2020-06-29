@@ -20,7 +20,12 @@ Page({
   },
   onLoad: function () {
     let that = this
-    event.on('loadingDone', that, that.finishLoading);
+    // event.on('loadingDone', that, that.finishLoading);
+    // that.launchScreen()
+    that.setData({
+      // finishLoading: globalData.finishLoading,
+      finishLoading: true
+    })
     event.on('languageChanged', that, that.setLanguage);
     that.setLanguage()
     let h = globalData.screenSize.height
@@ -83,6 +88,24 @@ Page({
         navStyle: 'white',
         navTitle: this.data.language.myProfile
       })
+    },
+
+    launchScreen: function () {
+      let that = this
+      setTimeout(function () {
+        if (that.data.canFinish == true){
+          that.setData({
+            twoSec: false,
+            finishLoading: true
+          })
+        } else {
+          that.setData({
+            twoSec: false,
+            // finishLoading: false
+          })
+        }
+        ;
+      }, 1800);
     }
  
 })

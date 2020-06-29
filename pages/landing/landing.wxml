@@ -1,29 +1,38 @@
-<navbar
-  navStyle="{{navStyle}}"
-  navHeight="{{navHeight}}"
-  navTitle="{{navTitle}}"
-/>
+<block wx-if="{{finishLoading}}">
+  <navbar
+    navStyle="{{navStyle}}"
+    navHeight="{{navHeight}}"
+    navTitle="{{navTitle}}"
+  />
 
-<tabbar
-  langIndex="{{langIndex}}"
-  language="{{language}}"
-  tabItems="{{tabItems}}"
-  navBot="{{navBot}}"
-  bindtoIndex="toIndex"
-  bindtoProfile="toProfile"
-/>   
+  <tabbar
+    langIndex="{{langIndex}}"
+    language="{{language}}"
+    tabItems="{{tabItems}}"
+    navBot="{{navBot}}"
+    bindtoIndex="toIndex"
+    bindtoProfile="toProfile"
+  />   
 
-<index
-  index="{{index}}"
-  langIndex="{{langIndex}}"
-  language="{{language}}"
-  bindswitchLang="switchLang"
-  navHeight="{{navHeight}}"
-/>
+  <index
+    index="{{index}}"
+    langIndex="{{langIndex}}"
+    language="{{language}}"
+    bindswitchLang="switchLang"
+    navHeight="{{navHeight}}"
+  />
 
-<profile
-  profile="{{profile}}"
-  langIndex="{{langIndex}}"
-  language="{{language}}"
-  bindswitchLang="switchLang"
-/>
+  <profile
+    profile="{{profile}}"
+    navHeight="{{navHeight}}"
+    langIndex="{{langIndex}}"
+    language="{{language}}"
+    bindswitchLang="switchLang"
+  />
+</block>
+
+<block wx-if="{{!finishLoading}}">
+  <view class="loading-mask">
+    <image class="launch-screen-logo" src="../../images/loading.gif"></image>
+  </view>
+</block>

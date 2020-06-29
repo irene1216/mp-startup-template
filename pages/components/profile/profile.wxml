@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <block wx:if="{{profile}}">
-  <view class="container">
+  <view class="container"  style="padding-top: {{navHeight}}rpx;">
     <view class="userinfo">
       <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> {{language.login}} </button>
       <block wx:else>

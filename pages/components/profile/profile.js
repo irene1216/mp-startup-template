@@ -16,6 +16,10 @@ Component({
       type: Object,
       value: {}
     },
+    navHeight: {
+      type: Number,
+      value: 0
+    }
   },
   data: {
     userInfo: {},
