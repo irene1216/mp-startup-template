@@ -1,5 +1,6 @@
 // pages/components/profile/profile.js
 const globalData = getApp().globalData
+const app = getApp()
 import event from '../../../utils/event';
 
 Component({
@@ -26,40 +27,39 @@ Component({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  methods: {
-    onLoad: function () {
-      if (app.globalData.userInfo) {
+  ready: function() { 
+      if (globalData.userInfo) {
         this.setData({
-          userInfo: app.globalData.userInfo,
+          userInfo: globalData.userInfo,
           hasUserInfo: true
         })
-      } else if (this.data.canIUse){
-        app.userInfoReadyCallback = res => {
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
       } else {
-        // 在没有 open-type=getUserInfo 版本的兼容处理
         wx.getUserInfo({
           success: res => {
-            app.globalData.userInfo = res.userInfo
+            event.emit('getInfo');
             this.setData({
               userInfo: res.userInfo,
               hasUserInfo: true
             })
           }
         })
-      }
-    },
-    getUserInfo: function(e) {
-      console.log(e)
-      app.globalData.userInfo = e.detail.userInfo
+    }
+  },
+
+  detached: function() { 
+    wx.setStorage({
+      key: 'globalData',
+      data: globalData
+    });
+  },
+  methods: {
+    getUserInfo: function (e) {
+      event.emit('getInfo');
+      globalData.userInfo = e.detail.userInfo
       this.setData({
         userInfo: e.detail.userInfo,
         hasUserInfo: true
-      })
-    }
+      })  
+    },
   }
 })
