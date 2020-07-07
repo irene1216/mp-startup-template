@@ -8,7 +8,6 @@ const savedGlobalData = wx.getStorageSync('globalData');
 T.registerLocale(locales);
 if (savedLangIdx != null) {
   T.setLocaleByIndex(savedLangIdx);
-  console.log("there is somethinggggggggggggg")
   wx.T = T;
 } else {
   wx.getSystemInfo({
@@ -144,7 +143,6 @@ App({
     this.globalData.url = wx.T.getUrl();
     this.globalData.langIndex = wx.T.getlangIndex(),
     this.globalData.language = wx.T.getLanguage();
-    this.globalData.url = wx.T.getUrl()
     wx.setStorage({
       key: 'globalData',
       data: this.globalData

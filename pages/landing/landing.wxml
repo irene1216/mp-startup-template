@@ -22,6 +22,9 @@
     navHeight="{{navHeight}}"
   />
 
+  <modal
+    
+  />
   <profile
     profile="{{profile}}"
     navHeight="{{navHeight}}"

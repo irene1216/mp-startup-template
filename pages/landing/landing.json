@@ -2,6 +2,7 @@
   "usingComponents": {
     "navbar": "../../components/navbar/navbar",
     "tabbar": "../../components/tabbar/tabbar",
+    "modal": "../../components/modal/modal",
     "index": "/pages/components/index/index",
     "profile": "/pages/components/profile/profile"
   }

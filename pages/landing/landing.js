@@ -8,7 +8,7 @@ Page({
     // tabbar data
     langIndex: 0,
     tabItems: 0,
-    navBot:0,
+    navBot: 0,
     index: true,
     profile: false,
 
